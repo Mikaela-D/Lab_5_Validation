@@ -3,7 +3,7 @@ package ie.atu.lab5_validation;
 public class Person {
     private String name;
     private String title;
-    private int employeeID;
+    private int employeeId;
     private int age;
     private String email;
     private String position;
@@ -26,11 +26,11 @@ public class Person {
     }
 
     public int getEmployeeID() {
-        return employeeID;
+        return employeeId;
     }
 
-    public void setEmployeeID(int employeeID) {
-        this.employeeID = employeeID;
+    public void setEmployeeId(int employeeId) {
+        this.employeeId = employeeId;
     }
 
     public int getAge() {
