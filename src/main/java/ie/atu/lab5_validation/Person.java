@@ -21,11 +21,11 @@ public class Person {
     @Max(value = 5, message = "Title must be smaller or equal to 5 characters")
     private String title;
 
-    @Size(min = 2, max = 10, message = "EmployeeId must be between 2 and 10 numbers")
-    private int employeeId;
+    @Size(min = 2, max = 10, message = "EmployeeId must be between 2 and 10 characters")
+    private String employeeId;
 
     @NotBlank(message = "Age cannot be blank")
-    private int age;
+    private String age;
 
     @NotBlank(message = "Position cannot be blank")
     private String position;
