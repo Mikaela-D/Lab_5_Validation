@@ -1,67 +1,35 @@
 package ie.atu.lab5_validation;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
 public class Person {
+    @NotBlank(message = "Name cannot be blank")
+    @Size(min = 2, max = 50, message = "Name must be between 2 and 50 characters")
     private String name;
-    private String title;
-    private int employeeId;
-    private int age;
+
+    @Email(message = "Invalid email address")
     private String email;
+
+    @NotBlank(message = "Title cannot be blank")
+    @Max(value = 5, message = "Title must be smaller or equal to 5 characters")
+    private String title;
+
+    @Size(min = 2, max = 10, message = "EmployeeId must be between 2 and 10 numbers")
+    private int employeeId;
+
+    @NotBlank(message = "Age cannot be blank")
+    private int age;
+
+    @NotBlank(message = "Position cannot be blank")
     private String position;
+
+    @NotBlank(message = "Department cannot be blank")
     private String department;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public int getEmployeeID() {
-        return employeeId;
-    }
-
-    public void setEmployeeId(int employeeId) {
-        this.employeeId = employeeId;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPosition() {
-        return position;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
-    }
-
-    public String getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(String department) {
-        this.department = department;
-    }
 }
