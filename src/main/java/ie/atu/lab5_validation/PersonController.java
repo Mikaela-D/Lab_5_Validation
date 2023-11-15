@@ -5,16 +5,17 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@RequestMapping
+@RequestMapping("/person")
 @RestController
 public class PersonController {
     private final PersonService personService ;
 
     public PersonController(PersonService personService) {
-        this.personService;
+        this.personService = personService;
     }
 
-    @GetMapping("/{employed")
+
+    @GetMapping("/{employeeId}")
     public ResponseEntity<?> getPerson(@PathVariable String employeeId) {
         if(employeeId.length() > 5 || employeeId.isBlank()) {
             return ResponseEntity.badRequest().body("EmployeeId is invalid");

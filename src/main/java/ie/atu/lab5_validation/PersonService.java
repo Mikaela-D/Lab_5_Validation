@@ -9,7 +9,7 @@ public class PersonService {
         System.out.println("Person saved: " + person);
     }
 
-    public Person retrievePerson(Person person) {
+    public Person getPersonByEmployeeId(String employeeId) {
         return new Person();
     }
 }
