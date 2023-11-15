@@ -8,4 +8,8 @@ public class PersonService {
     public void savePerson(Person person) {
         System.out.println("Person saved: " + person);
     }
+
+    public Person retrievePerson(Person person) {
+        return new Person();
+    }
 }
